@@ -40,4 +40,4 @@ To use this dataset for training or evaluation, you can download it from [here](
 
 ## License
 
-This dataset is released under the [CC-BY-NC-SA-4.0](Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License).
+This dataset is released under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License).
