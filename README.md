@@ -18,6 +18,8 @@ A comprehensive collection of Chinese video captions from Youku (优酷), featur
 - **🈺 Language**: Chinese
 - **📱 Source**: Youku Platform (优酷)
 
+![image](overview.png)
+
 ## 🚀 Usage
 
 The dataset is available for download from [ModelScope](https://modelscope.cn/datasets/os_ai/Youku_Dense_Caption/).
