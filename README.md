@@ -18,7 +18,9 @@ A comprehensive collection of Chinese video captions from Youku (优酷), featur
 - **🈺 Language**: Chinese
 - **📱 Source**: Youku Platform (优酷)
 
-<img src="overview.png" width="75%">
+<div align="center">
+   <img src="overview.png" width="80%">
+</div>
 
 ## 🚀 Usage
 
@@ -36,27 +38,32 @@ git lfs clone https://oauth2:your_git_token@www.modelscope.cn/datasets/os_ai/You
 
 ### 2. Dataset Structure 📁
 
-#### 📌 benchmark_files/
-Specialized benchmark data collections:
-- 🎯 Video caption generation task data
-- 📍 Video moment retrieval task data
-
-#### 📌 meta_files/
-Core dataset metadata:
-- 📝 Video category information
-- 🔗 Video file paths
-- 💬 Complete caption text
-
-#### 📌 data_files/
-Main data storage, organized by categories:
 ```
-data_files/
-├── Agriculture/
-│   ├── train/ (zipped)
-│   ├── val/   (zipped)
-│   └── test/  (ready for preview)
-├── Children/
-└── ...
+📦 ROOT
+├── 📁 benchmark_files/
+│   ├── 📊 generation.json     # Test set for caption generation
+│   └── 📊 grounding.json      # Test set for video moment retrieval
+│
+├── 📁 meta_files/
+│   ├── 📋 Agriculture.csv     # Video file paths and Complete captions in the agriculture category
+│   ├── 📋 Children.csv
+|   └── 📋 [Other Categories].csv
+│
+└── 📁 data_files/
+    ├── 📁 Agriculture/         # Agriculture videos
+    │   ├── 📦 train/           # Training set (zipped)
+    │   ├── 📦 val/             # Validation set (zipped)
+    │   └── 📁 test/            # Test set (preview ready)
+    │
+    ├── 📁 Children/            # Children videos
+    │   ├── 📦 train/
+    │   ├── 📦 val/
+    │   └── 📁 test/
+    │
+    └── 📁 [Other Categories]/  # Other categories
+        ├── 📦 train/
+        ├── 📦 val/
+        └── 📁 test/
 ```
 
 ### 3. Usage Guide 📖
