@@ -18,45 +18,63 @@ A comprehensive collection of Chinese video captions from Youku (优酷), featur
 - **🈺 Language**: Chinese
 - **📱 Source**: Youku Platform (优酷)
 
-![image](overview.png)
+<img src="overview.png" width="75%">
 
 ## 🚀 Usage
 
 The dataset is available for download from [ModelScope](https://modelscope.cn/datasets/os_ai/Youku_Dense_Caption/).
 
-### 📦 Method 1: Using ModelScope SDK
-
-First, authenticate with your SDK token:
-```python
-from modelscope.hub.api import HubApi
-
-api = HubApi()
-api.login('your_sdk_token')  # Get token from: https://modelscope.cn/my/myaccesstoken
-```
-
-#### Download Options:
-
-**Full Dataset:**
-```python
-from modelscope.msdatasets import MsDataset
-
-ds = MsDataset.load('os_ai/Youku_Dense_Caption')
-```
-
-**Specific Split:**
-```python
-from modelscope.msdatasets import MsDataset
-
-ds = MsDataset.load('os_ai/Youku_Dense_Caption', split='Culture')
-```
-
-### 📥 Method 2: Using Git LFS
-
+### 1. Dataset Download ⬇️
 ```bash
+# Install Git LFS
 git lfs install
-git clone https://oauth2:your_git_token@www.modelscope.cn/datasets/os_ai/Youku_Dense_Caption.git
+
+# Clone the dataset
+git lfs clone https://oauth2:your_git_token@www.modelscope.cn/datasets/os_ai/Youku_Dense_Caption.git
 ```
-> 🔑 Get your git token from: https://modelscope.cn/my/myaccesstoken
+> 🔑 **Get Token**: Visit https://modelscope.cn/my/myaccesstoken
+
+### 2. Dataset Structure 📁
+
+#### 📌 benchmark_files/
+Specialized benchmark data collections:
+- 🎯 Video caption generation task data
+- 📍 Video moment retrieval task data
+
+#### 📌 meta_files/
+Core dataset metadata:
+- 📝 Video category information
+- 🔗 Video file paths
+- 💬 Complete caption text
+
+#### 📌 data_files/
+Main data storage, organized by categories:
+```
+data_files/
+├── Agriculture/
+│   ├── train/ (zipped)
+│   ├── val/   (zipped)
+│   └── test/  (ready for preview)
+├── Children/
+└── ...
+```
+
+### 3. Usage Guide 📖
+
+1. **After Download**:
+   - Navigate to target category folder
+   - Example: `cd data_files/Agriculture`
+
+2. **Data Preparation**:
+   - Unzip files in train/ and val/ directories
+   - Files in test/ directory are ready to use
+
+> ⚠️ **Important Notes**:
+> - train and val data are stored in compressed format, requiring extraction
+> - test data is directly accessible for preview and testing
+
+---
+💡 For questions, please refer to project documentation or submit an Issue
 
 ## 📚 Citation
 
